@@ -1,0 +1,22 @@
+".container": {
+  backgroundColor: "white",
+  layout: "vertical"
+},
+".line": {
+  height: Ti.UI.SIZE,
+  layout: "horizontal"
+},
+".line[platform=ios]": {
+  horizontalWrap: false
+},
+".label": {
+  width: "30%",
+  color: "black"
+},
+".textfield": {
+  width: "70%",
+  borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+},
+".textfield[platform=android]": {
+  color: "black"
+}

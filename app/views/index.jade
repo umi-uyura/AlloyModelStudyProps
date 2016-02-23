@@ -1,0 +1,15 @@
+Alloy
+  Model(src="settings")/
+  NavigationWindow(module="xp.ui")
+    Window.container(title="Alloy Model Study: Properties", onOpen="doOpen")
+      View.line
+        Label.label Name:
+        TextField#textName.textfield(value="{settings.name}")
+      View.line
+        Label.label Gender:
+        TextField#textGender.textfield(value="{settings.gender}")
+      View.line
+        Label.label Nationality:
+        TextField#textNationality.textfield(value="{settings.nationality}")
+      View.controll
+        Button#saveButton(onClick="doClick") Save
