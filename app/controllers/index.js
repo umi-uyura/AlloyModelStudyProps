@@ -20,7 +20,7 @@ function doGenderClick(e) {
   var opts = {
     title: 'Select gender',
     options: [
-      'male', 'female', 'other', 'cancel'
+      'Male', 'Female', 'Other', 'Cancel'
     ],
     cancel: 3
   };
