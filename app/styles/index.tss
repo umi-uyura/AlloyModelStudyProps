@@ -19,4 +19,10 @@
 },
 ".textfield[platform=android]": {
   color: "black"
+},
+"#textGender[platform=ios]": {
+  editable: false
+},
+"#textGender[platform=android]": {
+  focusable: false
 }

@@ -2,22 +2,36 @@ var settings = Alloy.Models.settings;
 
 function doOpen() {
   settings.fetch();
-
-  Ti.API.debug('doOpen() - ' + JSON.stringify(settings));
 }
 
-function doClick(e) {
+function doSaveClick(e) {
   var name = $.textName.getValue();
   var gender = $.textGender.getValue();
   var nationality = $.textNationality.getValue();
-
-  Ti.API.debug('doClick() - ' + name + ' / ' + gender + ' / ' + nationality);
 
   settings.save({
     name: name,
     gender: gender,
     nationality: nationality
   });
+}
+
+function doGenderClick(e) {
+  var opts = {
+    title: 'Select gender',
+    options: [
+      'male', 'female', 'other', 'cancel'
+    ],
+    cancel: 3
+  };
+  var genderDialog = Ti.UI.createOptionDialog(opts);
+  genderDialog.addEventListener('click', function(e) {
+    var cancel = ((OS_IOS && opts.cancel === e.index) || (OS_ANDROID && e.cancel));
+    if (!cancel) {
+      $.textGender.setValue(opts.options[e.index]);
+    }
+  });
+  genderDialog.show();
 }
 
 $.index.open();

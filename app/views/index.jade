@@ -7,9 +7,9 @@ Alloy
         TextField#textName.textfield(value="{settings.name}")
       View.line
         Label.label Gender:
-        TextField#textGender.textfield(value="{settings.gender}")
+        TextField#textGender.textfield(value="{settings.gender}", onClick="doGenderClick")
       View.line
         Label.label Nationality:
         TextField#textNationality.textfield(value="{settings.nationality}")
       View.controll
-        Button#saveButton(onClick="doClick") Save
+        Button#saveButton(onClick="doSaveClick") Save
