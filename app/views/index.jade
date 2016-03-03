@@ -1,7 +1,7 @@
 Alloy
   Model(src="settings")/
   NavigationWindow(module="xp.ui")
-    Window.container(title="Alloy Model Study: Properties", onOpen="doOpen")
+    Window.container(title="Alloy Model Study: Properties", onOpen="doOpen", onClose="doClose")
       View.line
         Label.label Name:
         TextField#textName.textfield(value="{settings.name}")

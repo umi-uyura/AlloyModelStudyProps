@@ -4,6 +4,10 @@ function doOpen() {
   settings.fetch();
 }
 
+function doClose() {
+  $.destroy();
+}
+
 function doSaveClick(e) {
   var name = $.textName.getValue();
   var gender = $.textGender.getValue();
